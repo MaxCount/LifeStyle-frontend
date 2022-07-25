@@ -9,6 +9,9 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './auth/login/login.component';
 import {RouterModule} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
+import {ToastrModule} from "ngx-toastr";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {NgxWebstorageModule} from "ngx-webstorage";
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
+    NgxWebstorageModule.forRoot(),
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   // schemas:[
   //   CUSTOM_ELEMENTS_SCHEMA,

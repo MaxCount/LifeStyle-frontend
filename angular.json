@@ -103,5 +103,7 @@
       }
     }
   },
-  "defaultProject": "Life-Style"
+  "cli": {
+    "analytics": false
+  }
 }
