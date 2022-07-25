@@ -1,10 +1,12 @@
 header{
   border-radius: 1px;
 }
-.reddit-icon-svg{
+.LifeStyle-icon{
   height: 50px;
   padding: 8px 8px 8px 0;
   width: 50px;
+  display: inline-block;
+  margin-left: 20px;
 }
 
 .reddit-text{
@@ -29,7 +31,6 @@ header{
   text-decoration: none;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: .5px;
   line-height: 24px;
   text-transform: uppercase;
   padding: 3px 16px;
