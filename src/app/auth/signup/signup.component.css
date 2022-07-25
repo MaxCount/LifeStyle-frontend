@@ -1,18 +1,12 @@
-html{
-  padding: 0;
-  height: 100%;
+.register-section{
+  margin: 100px;
 }
-body{
-  margin-top: 63px;
-  height: 100%;
-}
-login,
+
 .sign-up {
   background-color: #0079D3;
-  border-color: #0079D3;
   color: aliceblue;
   fill: #0079D3;
-  border: 1px solid;
+  border: 1px solid #0079D3;
   border-radius: 4px;
   text-align: center;
   letter-spacing: 1px;
@@ -24,7 +18,10 @@ login,
   text-transform: uppercase;
   padding: 3px 16px;
   opacity: 1;
+  margin-top: 20px;
 }
-input.ng-invalid.ng-touched{
-  border: 1px solid red;
+.form-group{
+  margin-top: 20px;
+  margin-left: 30px;
+
 }
