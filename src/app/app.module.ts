@@ -8,14 +8,22 @@ import {AppRoutingModule} from "./app-routing.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './auth/login/login.component';
 import {RouterModule} from "@angular/router";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgxWebstorageModule} from "ngx-webstorage";
 import { HomeComponent } from './home/home.component';
+
 import { PostTileComponent } from './shared/post-tile/post-tile.component';
 import { CreatePostComponent } from './post/create-post/create-post.component';
 import { ViewPostComponent } from './post/view-post/view-post.component';
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {TokenInterceptor} from "./token-interceptor";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {EditorModule} from "@tinymce/tinymce-angular";
+import { VoteButtonComponent } from './shared/vote-button/vote-button.component';
+import { UserProfileComponent } from './auth/user-profile/user-profile.component';
+import { SideBarComponent } from './shared/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +35,9 @@ import { ViewPostComponent } from './post/view-post/view-post.component';
     PostTileComponent,
     CreatePostComponent,
     ViewPostComponent,
+    VoteButtonComponent,
+    UserProfileComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,11 +48,19 @@ import { ViewPostComponent } from './post/view-post/view-post.component';
     NgxWebstorageModule.forRoot(),
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    FontAwesomeModule,
+    EditorModule,
+    NgbModule
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
