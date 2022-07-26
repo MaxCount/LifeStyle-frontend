@@ -12,6 +12,10 @@ import {HttpClientModule} from "@angular/common/http";
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgxWebstorageModule} from "ngx-webstorage";
+import { HomeComponent } from './home/home.component';
+import { PostTileComponent } from './shared/post-tile/post-tile.component';
+import { CreatePostComponent } from './post/create-post/create-post.component';
+import { ViewPostComponent } from './post/view-post/view-post.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import {NgxWebstorageModule} from "ngx-webstorage";
     HeaderComponent,
     SignupComponent,
     LoginComponent,
+    HomeComponent,
+    PostTileComponent,
+    CreatePostComponent,
+    ViewPostComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,10 +38,10 @@ import {NgxWebstorageModule} from "ngx-webstorage";
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],
-  // schemas:[
-  //   CUSTOM_ELEMENTS_SCHEMA,
-  //   NO_ERRORS_SCHEMA
-  // ],
+  schemas:[
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

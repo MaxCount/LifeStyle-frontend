@@ -103,7 +103,10 @@
       }
     }
   },
+
   "cli": {
     "analytics": false
   }
+
+
 }
