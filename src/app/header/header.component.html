@@ -6,13 +6,13 @@
         <div class="LifeStyle-icon">
           <img src="favicon.ico" alt="Avatar" >
         </div>
-        <span class="reddit-text">
+        <span class="life-style-text">
                     LifeStyle
                 </span>
       </a>
     </div>
-    <div class="flex-grow-1 float-right">
-            <div *ngIf="isLoggedIn" ngbDropdown class="float-right">
+    <div class="flex-grow-1 float-right" >
+            <div *ngIf="isLoggedIn" ngbDropdown class="float-right" style="   margin-left: 60%;">
               <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                 <button (click)="goToUserProfile()" ngbDropdownItem>Profile</button>
                 <button (click)="logout()" ngbDropdownItem>Logout</button>
@@ -23,8 +23,8 @@
               </button>
             </div>
               <div *ngIf="!isLoggedIn">
-              <a routerLink="/sign-up" class="float-right sign-up mr-2">Sign up</a>
-              <a routerLink="/login" class="float-right login mr-2">Login</a>
+              <a routerLink="/sign-up" class="float-right sign-up mr-2" style="margin-left: 60%;">Sign up</a>
+              <a routerLink="/login" class="float-right login mr-2" style="margin-left: 10px;">Login</a>
             </div>
     </div>
   </nav>

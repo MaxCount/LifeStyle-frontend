@@ -1,7 +1,6 @@
 .login-section{
   margin: 100px;
 }
-
 .login-failed-text{
   text-align: center;
   margin-top: 5px;
@@ -21,4 +20,13 @@
   margin-top: 5px;
   font-weight: bold;
   color: aliceblue;
+}
+.input.ng-invalid.ng-touched{
+  border: 1px solid red !important;
+}
+.form-group{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+
 }

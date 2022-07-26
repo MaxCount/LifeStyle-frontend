@@ -9,7 +9,7 @@ header{
   margin-left: 20px;
 }
 
-.reddit-text{
+.life-style-text{
   font-weight: 700;
   height: 50px;
   width: 50px;
@@ -52,7 +52,6 @@ header{
   border-color: #0079D3;
   color: #0079D3;
   fill: #0079D3;
-  border: 1px solid;
   border-radius: 4px;
   box-sizing: border-box;
   text-align: center;
