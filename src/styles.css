@@ -6,7 +6,11 @@ body{
   margin-top: 63px;
   height: 100%;
 }
-login,
+
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+.login,
 .sign-up {
   background-color: #0079D3;
   border-color: #0079D3;
@@ -25,6 +29,19 @@ login,
   padding: 3px 16px;
   opacity: 1;
 }
-input.ng-invalid.ng-touched{
-  border: 1px solid red;
+.col-md-11{
+  margin-left: 60px;
+}
+
+.flex-grow-1{
+  margin-left: 20px;
+}
+.float-right{
+  margin-left: 20px;
+}
+.mr-2{
+  margin-left: 300px;
+}
+.btnCommments{
+  margin-right: 20px;
 }
