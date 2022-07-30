@@ -24,6 +24,7 @@ import {EditorModule} from "@tinymce/tinymce-angular";
 import { VoteButtonComponent } from './shared/vote-button/vote-button.component';
 import { UserProfileComponent } from './auth/user-profile/user-profile.component';
 import { SideBarComponent } from './shared/side-bar/side-bar.component';
+import { AdminPageComponent } from './auth/admin-page/admin-page.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SideBarComponent } from './shared/side-bar/side-bar.component';
     VoteButtonComponent,
     UserProfileComponent,
     SideBarComponent,
+    AdminPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { SideBarComponent } from './shared/side-bar/side-bar.component';
     ToastrModule.forRoot(),
     FontAwesomeModule,
     EditorModule,
-    NgbModule
+    NgbModule,
+
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA,

@@ -7,6 +7,7 @@ import {ViewPostComponent} from "./post/view-post/view-post.component";
 import {UserProfileComponent} from "./auth/user-profile/user-profile.component";
 import {AuthGuard} from "./auth/auth.guard";
 import {CreatePostComponent} from "./post/create-post/create-post.component";
+import {AdminPageComponent} from "./auth/admin-page/admin-page.component";
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'view-post/:id', component: ViewPostComponent },
   { path: 'user-profile/:name', component: UserProfileComponent, canActivate: [AuthGuard]},
   { path: 'create-post', component: CreatePostComponent, canActivate: [AuthGuard] },
+  { path: 'admin-page', component: AdminPageComponent}
 ];
 
 @NgModule({

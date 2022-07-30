@@ -3,8 +3,8 @@
   <app-vote-button [post]="post"></app-vote-button>
   <!-- Section to Display Post Information-->
   <div class="col-md-11">
-    <span class="subreddit-info">
-      <span> . Posted by <a class="username" routerLink="/user/{{post.userName}}">{{post.userName}}</a></span>
+    <span class="user-info">
+      <span> Posted by <a class="username" routerLink="/user/{{post.userName}}">{{post.userName}}</a></span>
       <span> . {{post.duration}}</span>
     </span>
     <hr />

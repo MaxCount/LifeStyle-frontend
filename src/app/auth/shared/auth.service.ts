@@ -13,6 +13,7 @@ export class AuthService {
 
   @Output() loggedIn: EventEmitter<boolean> = new EventEmitter();
   @Output() username: EventEmitter<string> = new EventEmitter();
+  @Output() admin: EventEmitter<boolean> = new EventEmitter();
 
   refreshTokenPayload = {
     refreshToken: this.getRefreshToken(),
@@ -34,12 +35,15 @@ export class AuthService {
         this.localStorage.store('username', data.username);
         this.localStorage.store('refreshToken', data.refreshToken);
         this.localStorage.store('expiresAt', data.expiresAt);
+        this.localStorage.store('isAdmin', data.admin)
 
         this.loggedIn.emit(true);
         this.username.emit(data.username);
+        this.admin.emit(data.admin)
         return true;
       }));
   }
+
   refreshToken() {
     const refreshTokenPayload = {
       refreshToken: this.getRefreshToken(),
@@ -72,6 +76,7 @@ export class AuthService {
   isLoggedIn(): boolean {
     return this.getJwtToken() != null;
   }
+
   logout() {
     this.httpClient.post('http://localhost:8080/api/auth/logout', this.refreshTokenPayload,
       { responseType: 'text' })
@@ -84,5 +89,10 @@ export class AuthService {
     this.localStorage.clear('username');
     this.localStorage.clear('refreshToken');
     this.localStorage.clear('expiresAt');
+    this.localStorage.clear('isAdmin');
+  }
+
+  isAdmin(name: String) {
+    return this.httpClient.get<boolean>('http://localhost:8080/api/admin-page/isAdmin/' + name);
   }
 }
