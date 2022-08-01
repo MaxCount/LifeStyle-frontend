@@ -3,6 +3,8 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import {AuthService} from "../auth/shared/auth.service";
 import {Router} from "@angular/router";
 import {Observable} from "rxjs";
+import {PostModel} from "../shared/post-model";
+import {PostService} from "../shared/post.service";
 
 @Component({
   selector: 'app-header',
@@ -15,8 +17,14 @@ export class HeaderComponent implements OnInit {
   username!: string;
   authority!: boolean;
   admin!: Observable<boolean>;
+  public posts: PostModel[] ;
 
-  constructor(private authService: AuthService, private router: Router) { }
+
+
+  constructor(private authService: AuthService, private router: Router, private postService: PostService) {
+    this.posts = [];
+  }
+
 
   ngOnInit() {
     this.authService.loggedIn.subscribe((data: boolean) => this.isLoggedIn = data);
@@ -36,8 +44,6 @@ export class HeaderComponent implements OnInit {
       window.location.reload();
     })
   }
-
-
   goToAdminPage(){
     this.authService.isAdmin(this.username).subscribe({
       next: (responce:boolean) => {

@@ -1,0 +1,27 @@
+<div class="main">
+<table class="table table-striped table-bordered" xmlns:th="http://www.w3.org/1999/xhtml">
+    <thead class="thead-dark">
+    <tr>
+      <th>User ID</th>
+      <th>E-mail</th>
+      <th>First Name</th>
+      <th>Roles</th>
+      <th>Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let model of models">
+      <td>{{model?.userId}}</td>
+      <td>{{model?.email}}</td>
+      <td>{{model?.username}}</td>
+      <td> {{model?.authorities}} </td>
+<!--      <td><button class="login" (click)=onDeleteUser(model.userId)> delete</button></td>-->
+
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+

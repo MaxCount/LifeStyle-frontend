@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import {AppRoutingModule} from "./app-routing.module";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './auth/login/login.component';
 import {RouterModule} from "@angular/router";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
@@ -24,7 +24,8 @@ import {EditorModule} from "@tinymce/tinymce-angular";
 import { VoteButtonComponent } from './shared/vote-button/vote-button.component';
 import { UserProfileComponent } from './auth/user-profile/user-profile.component';
 import { SideBarComponent } from './shared/side-bar/side-bar.component';
-import { AdminPageComponent } from './auth/admin-page/admin-page.component';
+import { AdminPageComponent } from './auth/admin-page/admin-page/admin-page.component';
+import { ListOfUsersComponent } from './auth/admin-page/list-of-users/list-of-users.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { AdminPageComponent } from './auth/admin-page/admin-page.component';
     UserProfileComponent,
     SideBarComponent,
     AdminPageComponent,
+    ListOfUsersComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,7 @@ import { AdminPageComponent } from './auth/admin-page/admin-page.component';
     FontAwesomeModule,
     EditorModule,
     NgbModule,
-
+    FormsModule
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA,

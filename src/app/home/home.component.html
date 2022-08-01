@@ -2,12 +2,18 @@
   <div class="container">
     <div class="row">
       <hr />
+
       <div  class="col-md-9">
         <app-post-tile [posts]="posts"></app-post-tile>
       </div>
       <div class="col-md-3">
         <app-side-bar></app-side-bar>
+        <form class="form-inline">
+          <input type="search" (ngModelChange)="searchPost(key.value)" #key="ngModel" ngModel
+                 name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search" required>
+        </form>
       </div>
+
     </div>
   </div>
 </div>
