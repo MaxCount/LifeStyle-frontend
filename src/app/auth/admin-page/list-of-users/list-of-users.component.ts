@@ -25,7 +25,29 @@ export class ListOfUsersComponent implements OnInit {
     this.getUsers()
   }
 
-  // public onDeleteUser(userId: number): void {
-  //   this.adminService.deleteUser(userId);
-  // }
+  public DeleteUser(userId: number): void {
+    this.adminService.deleteUser(userId)
+      .subscribe({
+        next: (responce:void) =>{
+          console.log(responce)
+          this.getUsers()
+        },
+        error: (HttpErrorResponse)=>{
+          alert((HttpErrorResponse))
+        }
+    })
+  }
+
+  public setAdminRole(username: string): void {
+    this.adminService.setAdmin(username)
+      .subscribe({
+        next: (responce: void) => {
+          console.log(responce);
+          this.getUsers();
+        },
+        error: (HttpErrorResponse) => {
+          alert(HttpErrorResponse);
+        }
+      });
+  }
 }

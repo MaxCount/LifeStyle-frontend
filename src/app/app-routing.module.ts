@@ -9,6 +9,7 @@ import {AuthGuard} from "./auth/auth.guard";
 import {CreatePostComponent} from "./post/create-post/create-post.component";
 import {AdminPageComponent} from "./auth/admin-page/admin-page/admin-page.component";
 import {ListOfUsersComponent} from "./auth/admin-page/list-of-users/list-of-users.component";
+import {DeletePostComponent} from "./auth/admin-page/delete-post/delete-post.component";
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'user-profile/:name', component: UserProfileComponent, canActivate: [AuthGuard]},
   { path: 'create-post', component: CreatePostComponent, canActivate: [AuthGuard] },
   { path: 'admin-page', component: AdminPageComponent},
-  { path: 'admin-page/list-of-users', component:  ListOfUsersComponent}
+  { path: 'admin-page/list-of-users', component:  ListOfUsersComponent},
+  { path: 'admin-page/delete-post', component: DeletePostComponent}
 ];
 
 @NgModule({

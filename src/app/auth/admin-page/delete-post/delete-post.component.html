@@ -1,0 +1,15 @@
+<form class="form-inline">
+  <input type="search" (ngModelChange)="searchPost(key.value)" #key="ngModel" ngModel
+         name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search" required style="width: 400px; margin-left: 1%; margin-top: 78px; margin-bottom: 10px">
+  <div class="row post" *ngFor="let post of posts">
+
+  </div>
+
+  <div class="border" style="">
+  <li *ngFor="let post of posts" style="display: inline-block; border: #1c1c1c 1px solid; border-radius: 5px; margin-right: 10px;height: 90px; width: 118px; margin-left: 1%; margin-top: 10px">{{post.postName}}
+    <button class="login" (click)=DeletePost(post!.postName) ngbDropdownItem style="height: 35px; width: 78px; margin-left: 20px"> delete</button>
+  </li>
+  </div>
+</form>
+
+

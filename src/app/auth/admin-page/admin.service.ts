@@ -15,10 +15,14 @@ export class AdminService {
     return this.http.get<Array<userModel>>('http://localhost:8080/api/admin-page/getUsers');
   }
 
-  // public updateUser(user: userModel): Observable<userModel>{
-  //   return this.http.put<userModel>(`http://localhost:8080/api/admin-page/employee/update`, employee)
-  // }
-  // public deleteUser(userId: number): Observable<void> {
-  //   return this.http.delete<void>('http://localhost:8080/api/admin-page/deleteUser/' + userId);
-  // }
+  public setAdmin(username: string): Observable<void>{
+    return this.http.post<void>('http://localhost:8080/api/admin-page/set-admin-role/' + username, null)
+  }
+
+  public deleteUser(userId: number): Observable<void> {
+    return this.http.delete<void>('http://localhost:8080/api/admin-page/deleteUser/' + userId);
+  }
+  public deletePost(postName: String): Observable<void> {
+    return this.http.delete<void>('http://localhost:8080/api/admin-page/deletePost/' + postName);
+  }
 }

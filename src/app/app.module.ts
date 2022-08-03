@@ -26,6 +26,7 @@ import { UserProfileComponent } from './auth/user-profile/user-profile.component
 import { SideBarComponent } from './shared/side-bar/side-bar.component';
 import { AdminPageComponent } from './auth/admin-page/admin-page/admin-page.component';
 import { ListOfUsersComponent } from './auth/admin-page/list-of-users/list-of-users.component';
+import { DeletePostComponent } from './auth/admin-page/delete-post/delete-post.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ListOfUsersComponent } from './auth/admin-page/list-of-users/list-of-us
     SideBarComponent,
     AdminPageComponent,
     ListOfUsersComponent,
+    DeletePostComponent,
   ],
   imports: [
     BrowserModule,
